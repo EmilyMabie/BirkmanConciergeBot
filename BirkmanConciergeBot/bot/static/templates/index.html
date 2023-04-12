@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Birkman Concierge Bot</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bot/css/fonts.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Birkman Concierge Bot</h1>
+        <form id="chat-form">
+            <div class="form-group">
+                <input type="text" name="message" id="message" placeholder="Type your message here...">
+            </div>
+            <button type="submit" class="btn">Send</button>
+        </form>
+        <div id="chat-container"></div>
+    </div>
+    <script src="{% static 'js/chat.js' %}"></script>
+    <script>
+        const container = document.getElementById('iframe-container');
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://your-iframe-url.com';
+        iframe.frameborder = '0';
+        iframe.allowfullscreen = true;
+        container.appendChild(iframe);
+    </script>
+
+</body>
+
+</html>
